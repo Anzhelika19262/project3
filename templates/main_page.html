@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block main_page %}
+<div class="greeting">
+    <h2>Welcome to our web-app.</h2><br>
+    <p><img src="static/img/greeting.jpg" align="right">
+        Foreign Talker is the web, where you can make new friends,<br>
+        talk with the people from different countries, read and share<br>
+        the most brilliant story, collected from the whole world.<br><br>
+        There are a lot of things that you can do!<br>
+        If you want to join, click on the Registration button.<br>
+        However we have several rules that you should follow.<br><br>
+        Scroll down to learn more!
+    </p>
+</div>
+<hr>
+<div class="slides">
+    <h2>Our options:</h2>
+    <div class="adaptivny-slayder">
+  <input type="radio" name="kadoves" id="slaid1" checked>
+  <input type="radio" name="kadoves" id="slaid2">
+  <input type="radio" name="kadoves" id="slaid3">
+
+  <div class="kadoves">
+  <label for="slaid1"></label>
+  <label for="slaid2"></label>
+  <label for="slaid3"></label>
+  </div>
+
+  <div class="adaptivny-slayder-lasekun">
+  <div class="abusteku-deagulus">
+  <img src="static/img/flags.jpg"/>
+  <img src="static/img/discuss.jpg"/>
+  <img src="static/img/people.jpg"/>
+  </div>
+  </div>
+</div>
+</div>
+<hr>
+<div class="rules">
+    <h2>Our rules:</h2>
+    <ul>
+        <li>Be polite. Don't use appropriate words.</li>
+        <li>Try to help to the others.</li>
+        <li>Post the brilliant moments from books, games, films and life.</li>
+        <li>If you have some ideas, how to develop our web write to support.</li>
+        <li>Enjoy!</li>
+    </ul>
+</div>
+<hr>
+<div class="story_about_elephant">
+    <h2>Why elephant?</h2>
+    <p>If you are here you probably want to know the story about elephant.<br><br>
+        First of all, elephants are smart animals.<br>
+        They have good memory and can do some tasks.<br><br>
+        The second reason is that elephants are associated<br>
+        with strong and self-confident animals.<br><br>
+        Finally, they are communicative.<br><br>
+        *Programmer, who developed this web, think that
+        the elephant is the best animal, which characterizes the app Foreign Talker. :)</p>
+</div>
+{% endblock %}

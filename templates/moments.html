@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block fragments %}
+<title>Stories around the world</title>
+<h1>Stories around the world</h1>
+{% if current_user.is_authenticated %}
+    <div class="add">
+        <a href="add_news" class="btn btn-secondary">Add moment</a>
+        <a href="sort_news" class="btn btn-success">Sort by language</a>
+    </div>
+{% endif %}
+{% for item in news%}
+{% if current_user.is_authenticated and current_user == item.user %}
+    <div class="buttons">
+        <a href="news/{{ item.id }}" class="btn btn-warning">Edit</a>
+        <a href="news_delete/{{ item.id }}" class="btn btn-danger">Delete</a>
+    </div>
+{% endif %}
+<div class="col-md6 border rounded">
+    <h2>{{item.title}}</h2>
+    <div>
+        {{item.content}}
+    </div>
+    <div class="optional_inform">
+        Author - {{item.user.name}}, Language - {{item.language}}, Date - {{item.created_date}}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

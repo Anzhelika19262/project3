@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block people %}
+<title>Friends</title>
+<a href="/find_new"  class="btn btn-secondary">Find certain user</a>
+{% for item in users %}
+<div class="col-md10 border rounded">
+    <p>
+        <img src="static/img/profile.jpg" align="left" class="img_profile">
+        <div style="text-align: left;">{{item.name}}</div>
+        <div style="text-align: left;">{{item.country}}</div>
+        <div>{{item.about_yourself}}</div>
+        <a href="/messager/{{ item.id }}" class="btn btn-primary">Write</a>
+    </p>
+</div>
+{% endfor %}
+{% endblock %}

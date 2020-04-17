@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block map %}
+<title>Map</title>
+<div class="map">
+<h1>You can mark yourself on the map.</h1>
+<form class="user_location" action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <p class="col-md-8">{{ form.coords.label }}<br>
+        {{ form.coords(class="form-control") }}
+        {% for error in form.coords.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    {{ form.submit(type="submit", class="btn btn-success") }}
+    </p>
+</form>
+<img src="http://127.0.0.1:8080/static/img/map.jpg">
+</div>
+{% endblock %}

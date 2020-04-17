@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block user_interlocutor %}
+<title>Your interlocutors</title>
+{% if friends != '' %}
+{% for item in friends %}
+<div class="col-md10 border rounded">{{ item.friend_name }}
+<a href="/messager/{{ item.id }}" class="btn btn-primary">Write</a>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

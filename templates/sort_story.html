@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block sort_story %}
+<h1> {{ title }} </h1>
+<form class="sort_story" action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <p>
+        {{ form.language_sort.label }}<br>
+        {{ form.language_sort(class="form-control") }}<br>
+        {% for error in form.language_sort.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p class="find_btn">{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

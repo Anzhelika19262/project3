@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8080/static/css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+       <a href='http://127.0.0.1:8080/'>
+       <img src="http://127.0.0.1:8080/static/img/logo.jpg">
+       </a>
+            {% if title in ['Welcome', 'Authorization', 'Registration'] %}
+            <a class="btn btn-primary " href='http://127.0.0.1:8080/register'>Sign up</a>
+            <a class="btn btn-success" href='http://127.0.0.1:8080/login'>Log in</a>
+            {% elif title not in ['Welcome', 'Authorization', 'Registration'] %}
+            <a href="/Stories"  class="btn btn-success" style="margin-left: 60%">Stories</a>
+            <a href="/Message"  class="btn btn-secondary">Message</a>
+            <a href="/find"  class="btn btn-success">Find</a>
+             <a href="/profile"  class="btn btn-secondary">Profile</a>
+            <a href="/map"  class="btn btn-success">Map</a>
+           {% endif %}
+    </div>
+</header>
+<hr>
+<main role="main" class="container">
+    {% block main_page %}{% endblock %}
+    {% block log_in %}{% endblock %}
+    {% block registration %}{% endblock %}
+    {% if title == 'story' %}
+    <hr>
+    {% endif %}
+    {% block fragments %}{% endblock %}
+    {% block moments %}{% endblock %}
+    {% block find %}{% endblock %}
+    {% block people %}{% endblock %}
+    {% block messages %}{% endblock %}
+    {% block profile %}{% endblock %}
+    {% block map %}{% endblock %}
+    {% block user_interlocutor %}{% endblock %}
+    {% block sort_story %}{% endblock %}
+    {% block edit_profile %}{% endblock %}
+</main>
+<hr>
+</body>
+<div class="support">
+    <a href='mailto:ZAnzelika@yandex.ru'>&#128386; Support</a>
+</div>
+</html>

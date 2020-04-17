@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block find %}
+    <h1>Ready to make a new friends?</h1>
+<form class="find_user" action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <p>
+        {{ form.person.label }}<br>
+        {{ form.person(class="form-control") }}<br>
+        {% for error in form.person.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.country.label }}<br>
+        {{ form.country(class="form-control") }}<br>
+        {% for error in form.country.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.native_language.label }}<br>
+        {{ form.native_language(class="form-control") }}<br>
+        {% for error in form.native_language.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.new_language.label }}<br>
+        {{ form.new_language(class="form-control") }}<br>
+        {% for error in form.new_language.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.interests.label }}<br>
+        {{ form.interests(class="form-control") }}<br>
+        {% for error in form.interests.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-info") }}</p>
+    {{message}}
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block profile %}
+<title>Your profile </title>
+<div class="profile">
+    <a href="/edit_profile"  class="btn btn-secondary">Edit profile</a>
+    <p><img src="static/img/profile.jpg" align="left" class="img_profile">
+        <div class="user_login">Your login: {{ inform_about_user.name }} </div>
+        <div class="user_country">Your country: {{ inform_about_user.country }} </div>
+        <div class="user_native_language">Your native language: {{ inform_about_user.native_language }} </div>
+        <div class="user_new_language">Target language: {{ inform_about_user.new_language }} </div>
+        <div class="user_about_yourself">Information about your: {{ inform_about_user.about_yourself }} </div>
+        <div class="user_email">Your email: {{ inform_about_user.email }} </div>
+    <div class="info_about_edit">
+        *If you want to change something in your profile, click on the button Edit pofile.<br>
+        However, you can change only your target language, information about yourself and your email.
+    </div>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block edit_profile %}
+    <h1>Edit profile</h1>
+<form class="edit_profile" action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <p>
+        {{ form.new_language.label }}<br>
+        {{ form.new_language(class="form-control") }}<br>
+        {% for error in form.new_language.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.about_yourself.label }}<br>
+        {{ form.about_yourself(class="form-control") }}<br>
+        {% for error in form.about_yourself.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(class="form-control") }}<br>
+        {% for error in form.email.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-info") }}</p>
+    {{message}}
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block messages %}
+<title>Message</title>
+<div class="messages">
+{% if previous_sms != '' %}
+{% for item in previous_sms %}
+<div class="col-md-8">{{item.create_date}} From {{ item.from_who }}:  {{ item.message }}</div>
+{% endfor %}
+{% endif %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <p class="col-md-8">{{ form.messages.label }}<br>
+        {{ form.messages(class="form-control") }}<br>
+        {% for error in form.messages.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    {{ form.submit(type="submit", class="btn btn-info") }}
+    </p>
+</form>
+</div>
+{% endblock %}

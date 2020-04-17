@@ -1,0 +1,137 @@
+.logo .btn-primary{margin-left: 75%;}
+
+.logo{background: #211e1e;}
+body{background: url("img_for_css/fon.jpg");}
+
+.container .greeting, .slides, .rules, .story_about_elephant{background: whitesmoke;}
+.container .greeting{height: 450px; padding-right: 100px;}
+.container .greeting, .story_about_elephant p{padding-left: 20px; text-align: center;}
+.container .greeting, .slides, .rules, .story_about_elephant h2{text-align: center;}
+.container .rules li{text-align: left;}
+.container .rules{height: 200px;}
+.container .slides{height: 530px;}
+.container .story_about_elephant h8{text-align: center;}
+
+.support{
+         margin-top: 30px;
+         background: #211e1e;
+         height: 70px;
+	     padding-left: 40px;
+    	 padding-top: 30px;
+        }
+.support a{color: white;}
+
+hr{height: 40px; width: 100%;}
+
+.adaptivny-slayder {
+  position: relative;
+  max-width: 680px;
+  margin: 50px auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container .adaptivny-slayder input[name="kadoves"] {
+  display: none;
+}
+
+.container .kadoves {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.container .kadoves label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+.container #slaid1:checked~.kadoves label[for="slaid1"] {
+  background-color: white;
+}
+
+.container #slaid2:checked~.kadoves label[for="slaid2"] {
+  background-color: white;
+}
+
+.container #slaid3:checked~.kadoves label[for="slaid3"] {
+  background-color: white;
+}
+
+.container .adaptivny-slayder-lasekun {
+  overflow: hidden;
+
+}
+
+.container .abusteku-deagulus {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.container .abusteku-deagulus img {
+  width: 100%;
+  flex-shrink:0;
+}
+
+.container #slaid1:checked~adaptivny-slayder-lasekun abusteku-deagulus {
+  transform: translate(0);
+}
+
+.container #slaid2:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+.container #slaid3:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-200%);
+}
+
+.container .registration, .log_in, .add_news, .profile,
+.messages, .sort_story, .find_user, .edit_profile, .rounded{background: whitesmoke;
+                                            padding-left: 30px;
+                                            padding-right: 30px;
+                                            padding-top: 20px;}
+
+.container .registration, .log_in, .add_news, p{text-align: center;}
+.container .registration, .log_in .btn{text-align: left;}
+.container .registration .rules_btn{text-align: left;}
+.container .log_in .remember{text-align: left;}
+.container h1{text-align: center; color: white;}
+.container .rounded{padding-bottom: 20px;}
+.container .rounded h2{text-align: center;}
+.container .buttons{background: #2a3367ab;
+                    padding-top: 10px;
+                    padding-bottom: 10px;}
+
+.container .add_news{padding-bottom: 20px;}
+.container .rounded .btn-primary{margin-left: 90%}
+.container .img_profile{padding-right: 20px;}
+.container .user_new_language, .user_about_yourself, .user_email{padding-left: 170px;}
+.container .profile, .edit_profile{padding-bottom: 40px;}
+.container .profile .btn-secondary{margin-bottom: 20px;}
+.container .profile .info_about_edit{margin-top: 30px;}
+
+.container .messages, .find_user{padding-bottom: 30px;}
+
+.container .sort_story .find_btn{padding-left: 0px; padding-bottom: 10px;}
+
+.container .map{text-align: center;}
+.container .map .col-md-8{display: -webkit-inline-box;}
+.container .map .form-control{width: 72%;}
+.container .map .btn-success{margin-left: 10px;}
+
+.container .messages{width: 800px; margin-left: 14%;}
+.container .messages .col-md-8{display: -webkit-inline-box;}
+.container .messages label{padding-right: 20px;}
+.container .messages .btn-info{margin-left: 40px;}
+
+
+
