@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template
 from data import db_session, users
 from flask_login import LoginManager
@@ -33,4 +34,5 @@ def main_page():
 
 if __name__ == '__main__':
     main()
-    app.run(port=8080, host='127.0.0.1')
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
