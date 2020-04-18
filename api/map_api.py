@@ -14,7 +14,7 @@ def show_map():
         new_mark = cheek_request(form.coords.data)
         create_pt(new_mark)
         response_pt()
-        return render_template('map.html', form=form)
+        return redirect('/Stories')
     return render_template('map.html', form=form)
 
 
