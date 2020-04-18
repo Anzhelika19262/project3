@@ -13,8 +13,8 @@
        <img src="https://foreign-talker.herokuapp.com/static/img/logo.jpg">
        </a>
             {% if title in ['Welcome', 'Authorization', 'Registration'] %}
-            <a class="btn btn-primary " href='http://127.0.0.1:8080/register'>Sign up</a>
-            <a class="btn btn-success" href='http://127.0.0.1:8080/login'>Log in</a>
+            <a class="btn btn-primary " href='/register'>Sign up</a>
+            <a class="btn btn-success" href='/login'>Log in</a>
             {% elif title not in ['Welcome', 'Authorization', 'Registration'] %}
             <a href="/Stories"  class="btn btn-success" style="margin-left: 60%">Stories</a>
             <a href="/Message"  class="btn btn-secondary">Message</a>
