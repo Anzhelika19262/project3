@@ -18,7 +18,7 @@ def login():
             login_user(user, remember=form.remember_me.data)
             return redirect("/Stories")
         return render_template('login.html',
-                               message="Wrong login or password",
+                               message="Wrong login or password", title='Authorization',
                                form=form)
     return render_template('login.html', title='Authorization', form=form)
 
