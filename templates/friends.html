@@ -6,7 +6,7 @@
 {% for item in users %}
 <div class="col-md10 border rounded">
     <p>
-        {% if item.photo is True %}
+        {% if item.photo == 'True' %}
             <img src=f'static/img/{item.name}.jpg' align="left" class="img_profile">
         {% else %}:
             <img src=f'static/img/profile.jpg' align="left" class="img_profile">

@@ -5,7 +5,7 @@
 <div class="profile">
     <a href="/edit_profile"  class="btn btn-secondary">Edit profile</a>
     <a href="/change_photo"  class="btn btn-success">Change photo</a>
-    <p>{% if inform_about_user.photo is True %}
+    <p>{% if inform_about_user.photo == 'True' %}
             <img src=f'static/img/{inform_about_user.name}.jpg' align="left" class="img_profile">
         {% else %}:
             <img src=f'static/img/profile.jpg' align="left" class="img_profile">
