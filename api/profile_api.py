@@ -56,7 +56,7 @@ def change_photo():
             user.photo = True
             session.commit()
             img = request.files['file']
-            with open(f'static/img/{current_user.name}.jpg', 'wb') as new_photo:
+            with open(f'static/img/new_photo.jpg', 'wb') as new_photo:
                 new_photo.write(img.read())
             return redirect('/Stories')
         else:
