@@ -111,7 +111,7 @@ hr{height: 40px; width: 100%;}
                     padding-top: 10px;
                     padding-bottom: 10px;}
 
-.container .add_news{padding-bottom: 20px;}
+.container .add_news, .new_photo{padding-bottom: 20px;}
 .container .rounded .btn-primary{margin-left: 90%}
 .container .img_profile{padding-right: 20px;}
 .container .user_new_language, .user_native_language, .user_about_yourself, .user_email{padding-left: 170px;}
