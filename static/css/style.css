@@ -94,7 +94,7 @@ hr{height: 40px; width: 100%;}
   transform: translateX(-200%);
 }
 
-.container .registration, .log_in, .add_news, .profile,
+.container .registration, .log_in, .add_news, .profile, .new_photo,
 .messages, .sort_story, .find_user, .edit_profile, .rounded{background: whitesmoke;
                                             padding-left: 30px;
                                             padding-right: 30px;
@@ -114,7 +114,7 @@ hr{height: 40px; width: 100%;}
 .container .add_news{padding-bottom: 20px;}
 .container .rounded .btn-primary{margin-left: 90%}
 .container .img_profile{padding-right: 20px;}
-.container .user_new_language, .user_about_yourself, .user_email{padding-left: 170px;}
+.container .user_new_language, user_native_language, .user_about_yourself, .user_email{padding-left: 170px;}
 .container .profile, .edit_profile{padding-bottom: 40px;}
 .container .profile .btn-secondary{margin-bottom: 20px;}
 .container .profile .info_about_edit{margin-top: 30px;}

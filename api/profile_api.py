@@ -1,8 +1,8 @@
 import flask
-from flask import render_template, redirect, abort
+from flask import render_template, redirect, abort, request
 from data import db_session, users
 from flask_login import login_required, current_user
-from forms import profile_form, change_photo_form
+from forms import profile_form
 
 blueprint = flask.Blueprint('profile_api', __name__, template_folder='templates')
 
@@ -50,16 +50,15 @@ def get_profile():
 @blueprint.route('/change_photo', methods=['GET', 'POST'])
 def change_photo():
     session = db_session.create_session()
-    form = change_photo_form.PhotoForm()
-    if form.validate_on_submit():
+    if request.method == 'POST':
         user = session.query(users.User).filter(users.User.name == current_user.name).first()
         if user:
             user.photo = True
             session.commit()
-            img = form.request.files['file']
+            img = request.files['file']
             with open(f'static/img/{current_user.name}.jpg', 'wb') as new_photo:
                 new_photo.write(img.read())
             return redirect('/Stories')
         else:
             abort(404)
-    return render_template('change_photo.html', title='Edit profile', form=form)
+    return render_template('change_photo.html', title='Edit profile')
