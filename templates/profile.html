@@ -2,8 +2,10 @@
 
 {% block profile %}
 <title>Your profile </title>
+<div class="btn_edit">
 <a href="/edit_profile"  class="btn btn-secondary">Edit profile</a>
 <a href="/change_photo"  class="btn btn-success">Change photo</a>
+</div>
 <div class="profile">
         {% if inform_about_user.photo == True %}
             <img src="static/img/new_photo.jpg" align="left" class="img_profile">

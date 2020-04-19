@@ -133,7 +133,7 @@ hr{height: 40px; width: 100%;}
 .container .messages label{padding-right: 20px;}
 .container .messages .btn-info{margin-left: 40px;}
 
-.container .profile .btn-secondary, .btn-success{margin-bottom: 20px;}
+.container .btn_edit{margin-bottom: 20px;}
 
 
 
