@@ -5,13 +5,7 @@
 <a href="/find_new"  class="btn btn-secondary">Find certain user</a>
 {% for item in users %}
 <div class="col-md10 border rounded">
-    <p>
-        {% if item.photo == True %}
-            {% set link = f'static/img/{item.name}.jpg' %}
-            <img src=link align="left" class="img_profile">
-        {% else %}:
-            <img src='static/img/profile.jpg' align="left" class="img_profile">
-        {% endif %}
+    <p><img src='static/img/profile.jpg' align="left" class="img_profile">
         <div style="text-align: left;">{{item.name}}</div>
         <div style="text-align: left;">{{item.country}}</div>
         <div>{{item.about_yourself}}</div>
