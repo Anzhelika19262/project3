@@ -4,7 +4,12 @@
 <title>Your profile </title>
 <div class="profile">
     <a href="/edit_profile"  class="btn btn-secondary">Edit profile</a>
-    <p><img src="static/img/profile.jpg" align="left" class="img_profile">
+    <a href="/change_photo"  class="btn btn-success">Change photo</a>
+    <p>{% if inform_about_user.photo is True %}
+            <img src=f'static/img/{inform_about_user.name}.jpg' align="left" class="img_profile">
+        {% else %}:
+            <img src=f'static/img/profile.jpg' align="left" class="img_profile">
+        {% endif %}
         <div class="user_login">Your login: {{ inform_about_user.name }} </div>
         <div class="user_country">Your country: {{ inform_about_user.country }} </div>
         <div class="user_native_language">Your native language: {{ inform_about_user.native_language }} </div>

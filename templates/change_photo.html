@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block change_photo %}
+    <h1>Load a new photo</h1>
+    <form class="new_photo" action="" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+        <p>{{ form.new_image.file(type="file", name="file") }}</p>
+        <p class="btn">{{ form.submit(type="submit", class="btn btn-info") }}</p>
+    </form>
+{% endblock %}
