@@ -21,6 +21,7 @@ def new_chat(id):
         new_dialog.from_who = user
         session.add(new_dialog)
         session.commit()
+        return redirect(f'/messager/{id}')
     messages = session.query(message.Message).filter(message.Message.names == names).all()
     if session.query(friends.Friend).filter(friends.Friend.friend_name == interlocutor,
                                             friends.Friend.user_name == user).first() is None:
