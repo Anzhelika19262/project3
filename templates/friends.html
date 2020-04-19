@@ -7,7 +7,8 @@
 <div class="col-md10 border rounded">
     <p>
         {% if item.photo == True %}
-            <img src=f'static/img/{item.name}.jpg' align="left" class="img_profile">
+            {% set link = f'static/img/{item.name}.jpg' %}
+            <img src=link align="left" class="img_profile">
         {% else %}:
             <img src='static/img/profile.jpg' align="left" class="img_profile">
         {% endif %}

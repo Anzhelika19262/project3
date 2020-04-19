@@ -51,9 +51,6 @@ def get_profile():
 def change_photo():
     session = db_session.create_session()
     user = session.query(users.User).filter(users.User.name == current_user.name).first()
-    if user:
-        if user.photo:
-            photo = 'True'
     if request.method == 'POST':
         if user:
             user.photo = True
@@ -64,4 +61,4 @@ def change_photo():
             return redirect('/Stories')
         else:
             abort(404)
-    return render_template('change_photo.html', title='Edit profile', photo='True')
+    return render_template('change_photo.html', title='Edit profile')
