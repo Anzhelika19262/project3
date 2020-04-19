@@ -48,7 +48,7 @@ def get_profile():
 
 
 @blueprint.route('/change_photo', methods=['GET', 'POST'])
-def edit_profile():
+def change_photo():
     session = db_session.create_session()
     form = change_photo_form.PhotoForm()
     if form.validate_on_submit():
