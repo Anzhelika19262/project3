@@ -6,15 +6,6 @@
     {{ form.hidden_tag() }}
     {{ form.csrf_token }}
     <p>
-        {{ form.person.label }}<br>
-        {{ form.person(class="form-control") }}<br>
-        {% for error in form.person.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>
         {{ form.country.label }}<br>
         {{ form.country(class="form-control") }}<br>
         {% for error in form.country.errors %}
