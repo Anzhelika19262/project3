@@ -1,5 +1,5 @@
 import flask
-from flask import render_template, abord
+from flask import render_template, abort
 from data import db_session, users
 from forms import find_form
 
@@ -26,5 +26,5 @@ def find_friend():
         if user:
             return render_template('friends.html', title='people', users=user)
         else:
-            abord(404)
+            abort(404)
     return render_template('find.html', title='Find friends', form=form)
